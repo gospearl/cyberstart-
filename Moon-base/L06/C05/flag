@@ -1,0 +1,24 @@
+The flag is: 7z0Bf8NEi5tm9XzBwkmm
+
+Question:
+Ok, the excellent team on the next level have identified another alien server on a second alien probe ship that's headed to the moon, but it's protected in a more sophisticated way than the other. We need you to write a Python script which downloads a key, reverses it and then sends it back. Note that the key changes based on a timer.
+
+Instructions:
+
+Send server ("localhost", 10000) GET_KEY to retrieve the key.
+Reverse the key and send it back.
+Tip: Successfully send back the key in time to get the flag.
+
+
+Walkthrough: 
+#
+import socket
+clientsocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+client.connect(('localhost', 10000))
+client.send('GET_KEY'.encode())
+data = client.recv(1024)
+data2 = (data[::-1])
+client.send(data2)
+data3 = client.recv(1024)
+print(data3)
