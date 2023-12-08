@@ -1,0 +1,11 @@
+The flag is: A9B05FUnoC5iYKTxDLE4
+
+Question: Remember we said the Spetzners were mad scientists? Well, one of the gang, Vladimir, is an actual scientist, and runs an official scientific paper submission site called Hayka. But here's the thing - the server he runs the site from is his own, and we think he's also using it to store the gang's secret plans.
+
+We want you to take a look at the scientific paper upload page, we think it might be vulnerable. See if you can upload a PHP file which will output the code word "b1n4ry" to the screen when you visit the page.
+
+Tip: Upload the correct file and visit the file page to get the flag.
+
+Walkthrough:
+create a .php file to echo the required text. upload the file then change the url
+ to https://www.hellohayka.com/answer.php to get the flag

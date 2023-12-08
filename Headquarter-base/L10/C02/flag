@@ -1,0 +1,18 @@
+The flag is: 6wFcaG5mRZ2yU7Y4rD5X
+
+Question
+Here's what we know: when the phone was first started the PIN code code to log in was 4096. Every time we enter the PIN code, the number of times the PIN code has been entered correctly in the past is added to the value of the PIN code, to get the new PIN. We know the system has been used 5520 times before. What will the PIN code be this time?
+
+Walkthrough:
+The first time, the pin was 4096
+but each time the phone was correctly accessed, the number of times it was correctly accessed was added to the pin. And we were told that it was accessed correctly 5520 times.
+
+so, 4096+1+2+3+4+...+5520 will give the answer. However, it would take a long time to add this normally.
+
+Recall that, the sum of the first n number is equal to (n(n+1))/2
+using that, we have
+(5520(5521))/2 = 15237960
+so the 1+2+3+...+5520 part has been dealt with
+
+All that is left now, is to add 4096. That is,
+15237960 + 4096 = 15242056

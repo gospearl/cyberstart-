@@ -1,0 +1,10 @@
+The flag is: 8YBqF1vjnplFDCRomom
+
+Question: You need to write a simple script from scratch to crack into another program that takes an argument (a 4 digit numerical pin code) and outputs a result.
+
+Tip: If you enter the right argument into the program you get the flag.
+
+Walkthrough:
+
+this can be solved using python or bash. I used both but i prefer bash(it is easier)
+ run the script with python3 flag.py (or ./flag.sh) to get your flag

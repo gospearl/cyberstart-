@@ -1,0 +1,12 @@
+The flag is: Babaruski
+
+Question: Agent, this one is urgent. Our team have just intercepted some chatter between two gang members and it's confirmed they are holding a meeting tonight at a nightclub somewhere in London. Unfortunately there are a lot of nightclubs in London and they didn't mention which one. Then, 10 minutes after the conversation ended, one of them posted up a cryptic piece of text on his social media account. We think it contains the time and exact location of the meeting. We have every agent on the ninth floor working to decode the text, can you get there first?
+
+Here's what we know about it so far: each character in the text was converted into a decimal number (according to the ASCII chart), then each number had the same number subtracted from it (a number between 1 and 10). Then each number was written to a new line of the text.
+
+Tip: The flag is the name of the nightclub.
+
+
+Walkthrough:
+The first step was to understand the question. The logic is simply to convert the given decimal value to a list so that you can loop through the list and add a certain number bertween 1 and 10 to each of the decimal value. After everything, convert it to its corrresponding ascii value 
+Then run the script

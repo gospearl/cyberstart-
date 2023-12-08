@@ -1,0 +1,15 @@
+The flag is B3znJluppFPJnNG7PAg
+
+
+walkthrough
+
+I downloaded the files then 
+i used file to determine what type of image it was
+but it gave me no hint
+
+then i used binwalk to get more info and one of the jpgs had a zip file embedded in it
+
+I unzipped the file using unzip and it worked
+
+the extracted file(msg) had executable permission so i used ./msg to run it 
+after a couple of seconds, i got the flag  

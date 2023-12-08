@@ -1,0 +1,13 @@
+The flag is : Dc4GChlyxd3jkTmapRcQ0S
+
+Question: Quick job for you Agent. We think the gang have a port running between 14000 and 15000 that might expose some interesting information about them, we've temporarily pointed our domain services.cyberprotection.agency to their server. Use that address to find the service and connect to it.
+
+Tip: Connect to the port to get the flag.
+
+Walkthrough:
+I wrote a bash script(port_scan.sh)  to loop through all the ports
+Then i ran the script using ./port_scan.sh
+
+it showed that the connection to port 14444 was a success 
+
+I then used the "nc services.cyberprotection.agency 14444" command to connect to the port and i got the flag 

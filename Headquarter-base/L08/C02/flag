@@ -1,0 +1,14 @@
+The flag is:tZH9VW6zFgYkasEkEczVjZMX
+
+question: Recruit, another interesting one for you.
+
+We found a service running on one of The Chiquitoos servers at services.cyberprotection.agency on port 5737. We're not entirely sure what it does but we think we should check it out. We know that it somehow grants a code but it's hidden in so much text that we can't find it. Can you see if you can find it?
+
+Tip: Find the code, it's the flag!
+
+
+Walkthrough:
+nc services.cyberprotection.agency 5737 | grep -i "flag"
+
+
+NB: grep is case-sensitive by default. To make it case-insensitive, use -i

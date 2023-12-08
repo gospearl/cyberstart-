@@ -1,0 +1,46 @@
+The flag is: Hoi06bQoCygJNYd5syvJ
+
+Question: Agent, thanks to your efforts in finding the gang member leading the effort to send a robot to the bank, we've managed to recover some C code we think might be used by the robot to take photos, but we can't be sure because running it currently returns a segmentation fault. Another agent has rigged up the code to a camera interface. See if you can fix the code, get it to run and take a photo.
+
+Tip: Take the photo, the robots confirmation message will show the flag.
+
+Code: 
+int main()
+{
+  int take_photo = 0;
+  char command[8];
+  char *pictures = "take_pictures";
+  strcpy(command, pictures);
+
+  if (strcmp(command, "take_pictures") == 0) {
+    printf("%s\n", "CLICK_PHOTO_TAKEN");
+    take_photo = 1;
+  } else {
+    printf("%s\n", "SEG_FAULT_NO_PHOTO");
+  }
+  return 0;
+}
+
+
+
+Walkthrough: This is a segmentation fault. i.e, you're trying to access a restricted
+area of memory. To fix this, change the command[8] to a higher number that can allocate more space to the picture address. 
+
+
+
+
+int main()
+{
+  int take_photo = 0;
+  char command[14];
+  char *pictures = "take_pictures";
+  strcpy(command, pictures);
+
+  if (strcmp(command, "take_pictures") == 0) {
+    printf("%s\n", "CLICK_PHOTO_TAKEN");
+    take_photo = 1;
+  } else {
+    printf("%s\n", "SEG_FAULT_NO_PHOTO");
+  }
+  return 0;
+}

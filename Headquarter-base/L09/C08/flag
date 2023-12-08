@@ -1,0 +1,13 @@
+The flag is: ROCTrOPlAclukelAShuENWaCEleCTO
+
+Question: Agent, a possible breakthrough that we need your help with. We've found a server run by the gang, it's at services.cyberprotection.agency:3166 and it seems to be protecting some data. The gang member who we think administers it, Bogdan, is one of the key members behind the plans to steal the EMP. We think it might have even been his suggestion in the first place. In short, we need access to the data on that server.
+
+Fortunately we've been able to recover some source code for it. Take a look at the source code and see if you can get access to the server.
+
+Tip: Get access to the server to get the flag.
+
+Walkthrough: 
+use nc services.cyberprotection.agency 3166 to netcat to the server then when prompted for the first number
+input anny number. when prompted for the second input, type firstNum then press enter.
+the flag will be shown
+

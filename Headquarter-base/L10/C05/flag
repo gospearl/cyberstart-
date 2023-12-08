@@ -1,0 +1,23 @@
+Note: This was an ssh question
+
+The flag is: 4XAEhDJvZBuine9CCzmzcYmR
+
+Question:
+Log into this SSH server using the details below. We've received word that the gang has been using this public server to pass messages through the use of man pages. We need to see if they've used a particular code word (matryoshka) which they're using to say when to start implementing their plan. See if you can find it.
+
+Walkthrough:
+We have to search all the manpages for the word "matryoshka" but we don't know the exact man page 
+
+Method 1:
+we can use this command 
+man -K "matryoshka"
+
+which will then take us inside the man page that contains the word. the flag can be seen in the description.
+
+Method 2:
+Using the apropos command which searches for a keyword in names and descriptions of man pages.
+
+apropos "matryoshka"
+
+This outputs the name of the man page where the word can be found. You can the go to that particular manpage using the man command.
+

@@ -1,0 +1,14 @@
+The flag is: cMgbfpVP8y2TrfHNupQVsnxL
+
+Question: Quick extra project for you, recruit.
+
+We have managed to gain access to a server, which is running The Chiquitoo gang's secure encryption service. We need the password they are using as the encryption key. Can you find out what it is for me?
+
+SSH sessions only last 60 minutes, after that you will need to reload the page to get a new one.
+Tip: The flag is the password
+
+
+Walkthrough:  
+ssh into the server then use the command
+ps aux | grep -i "flag"
+to get the flag

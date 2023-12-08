@@ -1,0 +1,13 @@
+The flag is: 5aeAI8AKYiQzZbiQszkp
+
+Question: Recruit, it's time for you to get back in the field. We want to do a test run of one of the ship's onboard security systems. Take a look at the online control panel to the ship's security. Can you find a way to turn the alarms off? If you can, then maybe The Chiquitoos' can too!
+
+By the way, our intel tells us that there used to actually be a button called "Turn Off Alarms", which the ship's security team removed to try and make it more secure. Maybe start with that.
+
+Tip: Turn off the alarms to get the flag.
+
+
+
+Walkthrough:  
+just manipulate the url 
+ https://www.ship-shape-security.com/ship/465302/panel/turn%20off%20alarms

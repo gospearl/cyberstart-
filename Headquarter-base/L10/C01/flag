@@ -1,0 +1,14 @@
+the flag: AYGtKy5Nbc5RukjAxkB
+
+
+Walkthrough
+This is a buffer overflow question.
+
+step 1: i gave execution permission to the file
+step 2: I ran the program and i was prompted for the password
+step 3: I randomly inputted a very long alphanumeric string and i was given the flag
+
+Method 2: This is a more sophisticated method
+python -c 'print "A"*100' | ./program-x86
+
+this creates a string of 100 'A' characters and inputs it into the program when it is run

@@ -1,0 +1,17 @@
+The flag is: 007 987 352 5373
+
+Question: 
+See if you can crack into the Chirp site. If you do you'll see the calls Semyon made today, we're looking for the one to Yury. Oh, and luckily one of the other agents has managed to get the PHP source code to the page, that might help.
+
+Tip: The flag is Yury's phone number.
+
+Walkthrough:
+After crying for over 24hours, I finally solved this. Utilising my research skills!!
+
+We were told to manipulate the url in order to solve this challenge. However, the instruction was to look at a php login file to get hints. 
+
+The php code gave me a hint that in order to log in and get access to the file, the value of a key variable must be equal to the value of the password variable. 
+
+https://www.letschirp.com/login.php?key=grace&password=grace
+
+this gave me access to the file. 

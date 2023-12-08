@@ -1,0 +1,15 @@
+The flag is: bOKfOqCIccrdyPyepVUA
+NB: The flag changes.
+
+Question:Agent, we've been looking into the different ways the Spetzners have been communicating with each other about their plans, and one of them is a science forum called Bunsen Burners. We want to see if the site is vulnerable in such a way that would allow us to serve our own JavaScript to one of the gang when they view it.
+
+We've created an account for you and made a test forum page called "Hack Trick". Though it looks like input is sanitised, the alert function is still available. See if you can submit some malicious JavaScript and get an alert box to appear on the page saying "Kaboom!".
+
+Tip: Get the site to output an alert with the right text and you'll get the flag!
+
+
+Walkthrough: In the comment section, type the Javascript code
+
+<script>alert("Kaboom!");</script>
+
+press enter and the  flag will be displayed. 

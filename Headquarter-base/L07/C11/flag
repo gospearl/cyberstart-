@@ -1,0 +1,69 @@
+The flag is: ui4f9f43fhv9KGiugf43fi7
+
+Question:Recruit, we've stumbled upon something. We think it might really help in getting us closer to the Chiquitoos' plan to steal the shipment of Cola. They've created a spreadsheet listing all the containers they intend to target. Luckily for us, they've posted it online for other gang members to see and update. But, of course, being the clever cyber criminals they are, they've put it behind a particularly clever password system.
+
+If you visit the page where it exists the ciphered password is there but it changes every two seconds; too fast for us to decipher and use. One of our engineers has been working on a Python script to try and get around it. Have a look at the script and see if you can make some changes to get it working.
+
+Tip: Run the correct script to get the flag.
+
+Walkthrough:
+Write a python script (last.py) then run it using python3 last.py to get the flag
+
+
+Absolutely, let's break down the script line by line in simple terms:
+
+```python
+import urllib.request
+import time
+```
+- These lines import two modules: `urllib.request` for making HTTP requests and `time` for measuring time.
+
+```python
+def decrypt(text):
+    time.sleep(1)
+    return text[::-1]
+```
+- This defines a function named `decrypt` that simulates a decryption process. The function takes a string (`text`) as input, pauses for 1 second (simulating a time-consuming operation), and then returns the reversed version of the input string.
+
+```python
+url = "https://chiquitooenterprise.com/password?code="
+response = urllib.request.urlopen(url)
+revString = response.read().decode('utf-8').strip()
+```
+- This sets up a URL (`url`) to fetch `revString`. The script makes an HTTP request to this URL using `urllib.request.urlopen(url)`. It then reads the response, decodes it from bytes to a UTF-8 string, and removes leading and trailing whitespaces with `strip()`. The result is stored in `revString`.
+
+```python
+start_time = time.time()
+```
+- This records the current time (in seconds) and stores it in the variable `start_time`. It's the starting point for measuring how long the script takes to run.
+
+```python
+decrypted_string = decrypt(revString)
+```
+- This calls the `decrypt` function with `revString` as an argument. The result is stored in `decrypted_string`.
+
+```python
+link = "http://www.chiquitooenterprise.com/password"
+answer = f"{link}?code={decrypted_string}"
+```
+- This constructs a new URL (`answer`) by appending the `decrypted_string` to the original link.
+
+```python
+response = urllib.request.urlopen(answer)
+response = response.read()
+```
+- This makes a new HTTP request to the constructed URL (`answer`). It reads the response and stores it in the variable `response`.
+
+```python
+print(response.decode('utf-8'))
+```
+- This prints the decoded content of the response. It assumes the content is in UTF-8 encoding.
+
+```python
+end_time = time.time()
+elapsed_time = end_time - start_time
+print(f"Time taken: {elapsed_time:.2f} seconds")
+```
+- These lines calculate the time taken by subtracting the `start_time` from the current time (`end_time`). The result is printed, indicating how long the entire script took to run. The `:.2f` formatting ensures the time is displayed with two decimal places.
+
+This script essentially simulates a decryption process, fetches some data from a URL, and measures the time it takes to perform these operations. The specific decryption logic and the purpose of these operations may vary depending on the actual content and purpose of the web page being accessed.

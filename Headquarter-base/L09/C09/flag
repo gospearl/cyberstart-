@@ -1,0 +1,13 @@
+The flag is: 5iF4fG0vnsRHEdGfzMLSvXyQ
+
+Question: Agent, we have SSH access to one of the gang's servers that contains lots of files and we need to find one in particular.
+
+One of the gang, Stanislav, created the file on 22 Nov 2015 at 8.00pm (we know because we were monitoring him!). Can you find that particular file, we think it contains important information concerning the whereabouts of several gang members.
+
+
+
+
+Walkthrough: ssh into the server then 
+ find / -type f -newermt "2015-11-22 00:00:00" ! -newermt "2015-11-23 00:00:00"
+you'll discover all but one of the directories have permissions denied. That is, /etc/protocol
+cd into /etc then cat protocol to get the flag 

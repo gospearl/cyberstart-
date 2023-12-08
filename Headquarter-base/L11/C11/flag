@@ -1,0 +1,16 @@
+The flag is: Ypz7D1KcSSLdVIE36uNt
+NB: The flag changes ooo so the  steps is important
+
+Question: Yesterday our uncover agent let us know about an encryption tool one of the gang built called Cryptonite. It runs on one of the Bulldogs private servers and we think it might be vulnerable.
+
+See if you can use it to get access to the server and look for any files that might be worth investigating. We think the gang member who built it, Percy Pinkly, is involved in the gangs efforts to circumvent the banks main security alarms, so he might have been storing files on the server related to blueprints or the security system.
+
+Tip: There's a file on the server containing the flag.
+
+
+Walkthrough: On the search box, type cryptonite -h
+you'll see a couple of options(-n,-p and all), the other options are ok but the -n is a bit suspicious
+so using cryptonite -n , it gives you no important result . BUt using cryptonite -n; ls will display
+a list of files.
+
+use cryptonite -n; cat <filename> to check the content of each file. The flag is in one of the files.

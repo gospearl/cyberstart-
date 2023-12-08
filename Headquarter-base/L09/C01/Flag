@@ -1,0 +1,15 @@
+The flag is: wEslNeuKyCp5EgOwoz2P
+Nb: The flag changes
+
+Question: Agent, here's a test for you to show the rest of the team you deserve to be on this level.
+
+One of the Spetzners associates, Alexei, runs a science equipment ecommerce site called Centrifuge. Our team knows that he's secretly been using it to sell the Spetzners mad scientists the equipment they need for their schemes, so we've been trying to get access for weeks, to no avail.
+
+We've just had a bit of good news. When making an update to the site Alexei made a mistake which, for a few hours last night, left some of the sites PHP code exposed. We managed to grab the code when it was there. Take a look and see if you can use it to find a way in to the site.
+
+
+Walkthrough:we were given an exposed php code 
+< ?php $userAccess = isset($_COOKIE['userLoggedIn']) ? true : false; inspect the webpage and navigate 
+to application, then click on cookies. 
+
+add a new cookie named userLoggedIn with a value of true. refresh the page to get the flag

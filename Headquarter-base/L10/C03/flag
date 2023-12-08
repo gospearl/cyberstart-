@@ -1,0 +1,4 @@
+The flag is: NCE54L8D
+
+Walkthrough:
+I downloaded the two files. On opening them, i observed that it contained codes on different lines. so i checked the number of codes using the "wc -l <filename> command and discovered that the first file had 4096 codes while the second had 4095. That was weird so i used the "diff <file1>  <file2>" command to get the difference between the two files. the difference was NCE54L8D, which is the flag.

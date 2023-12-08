@@ -1,0 +1,11 @@
+DC0hkD1v1RiTmZG3G00s
+
+Walkthrough
+
+hint: Konami code. 
+check the source code, you'll see the keysequence, convert it to the ascii representation.  However, it differs slightly. e.g, 38 = & on the ascii table but in konami code 38 = up, 40= down, 37= left, 39=right
+
+press the key sequence. That is, up,up,down,down,left,right,left,right,B,A
+
+then the flag will appear.
+check the console develope tool to confirm your input

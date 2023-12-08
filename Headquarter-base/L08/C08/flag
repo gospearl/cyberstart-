@@ -1,0 +1,15 @@
+The flag is: U0ea0BQrnjAnCPsgLTT
+
+Question: 
+Recruit, we're close to foiling The Chiquitoos' plans, but to do so our guy on the inside needs access to the senior members of the gang. The only way he can do that is to pass one of their tests to see if he's got what it takes.
+
+The good news is that we know what the test is. He needs to bypass the security check on a file called "OverflowedBuffer". We've got hold of the file and the test is tonight. Can you do it for him?
+
+Tip: Pass the security check to get the flag.
+
+
+Walkthrough:
+
+after downloading the file, give it execution permissions then type 
+ python -c 'print "A"*30' | ./program-x86
+to get the flag

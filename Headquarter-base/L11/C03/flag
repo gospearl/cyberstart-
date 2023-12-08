@@ -1,0 +1,14 @@
+The flag is: hvMjw1CLRDcZZzTqO2k
+
+Question: One of the other agents needs your help. He's been trying to open a file we intercepted which we believe might have special insider information about the bank the Bulldogs are targeting. The agent thought opening the file was going to be simple, but it's not working. Can you help?
+
+Tip: Get the password and open the file to get the flag.
+
+walkthrough: 
+I used cat program-x86 to see the content of the file. I noticed that although it was a binary 
+file, it had a password hidden in it. 
+I used file command to check the kind of file it is. It is an elf file
+So, I added execution permissions to it.
+Then i ran it using ./program-x86
+I was prompted for the password and i put in the password i saw hidden in the file. Then i got the flag
+

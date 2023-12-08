@@ -1,0 +1,13 @@
+The flag is: f1bVHxhlqR1pSkfAeao
+
+Question:Have a look at this page in particular which the gang member was looking at. Anything strange about it?
+
+Tip: The flag is in one of the images! Oh, and for password protected files don't attempt to drag and drop them.
+
+Walkthrough:
+I downloaded all the images and used "binwalk *" to check them
+The first image had a zip file embedded in it. I tried to extract it with "unzip msg_more" where msg_more is the name of the embedded file but i was prompted for a password. i then decided to use "7z e msg_more" but i was still prompted for a password. 
+I uploaded the image on aperisolve and i got a list of common passwords. On trying them, one worked (Vidanya_Das).  
+I then gave it executable permissions using "chmod +x msg_more"
+then i ran it using ./msg_more
+It took a minute to decrypt but i got the flag.
